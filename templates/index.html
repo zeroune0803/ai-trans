@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 智能文档排版保真翻译</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=20260603a">
+</head>
+<body>
+
+<div class="container">
+    <!-- Theme toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>AI 格式保真文档翻译器</h1>
+        <p class="subtitle">保留原文样式排版，支持 DOCX / PPTX / XLSX</p>
+    </div>
+
+    <!-- Form -->
+    <form id="translateForm" class="fade-section">
+        <!-- Upload area -->
+        <div class="upload-area" id="uploadArea" tabindex="0" role="button">
+            <div id="uploadPlaceholder">
+                <span class="upload-icon">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M24 34V14M24 14l-8 8M24 14l8 8"/>
+                        <path d="M8 38h32"/>
+                        <rect x="6" y="6" width="36" height="36" rx="4"/>
+                    </svg>
+                </span>
+                <div class="upload-hint-main">点击选择 或 拖拽文件到此处</div>
+                <div class="upload-hint-sub">支持 DOCX / PPTX / XLSX · 单文件 ≤ 50MB</div>
+            </div>
+            <input type="file" id="fileInput" name="file" accept=".docx,.pptx,.xlsx" required>
+
+            <div class="file-chip" id="fileChip">
+                <div class="file-chip-info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                    </svg>
+                    <span id="fileName">document.docx</span>
+                    <span id="fileSize" class="file-size"></span>
+                </div>
+                <button type="button" class="file-chip-close" id="fileChipClose" aria-label="清除文件">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="upload-error" id="uploadError"></div>
+        </div>
+
+        <div class="form-config-grid">
+            <!-- Target language -->
+            <div class="form-section config-card">
+                <label class="form-label" for="targetLang">输出目标语言</label>
+                <select id="targetLang" name="target_lang">
+                    <option value="Japanese" selected>Japanese (日语)</option>
+                    <option value="English">English (英语)</option>
+                    <option value="Chinese">Chinese (中文)</option>
+                </select>
+            </div>
+
+            <!-- Speed mode -->
+            <div class="form-section config-card">
+                <label class="form-label">处理速度模式</label>
+                <div class="segmented-control" id="speedModeGroup">
+                    <label class="segment-card" onclick="selectMode('fast')">
+                        <input type="radio" name="speed_mode" value="fast">
+                        <div class="mode-title">⚡ 草稿快速版</div>
+                        <div class="mode-desc">最快出稿<br>适合先看效果</div>
+                    </label>
+                    <label class="segment-card active" onclick="selectMode('balanced')">
+                        <input type="radio" name="speed_mode" value="balanced" checked>
+                        <div class="mode-title">⚖ 推荐版</div>
+                        <div class="mode-desc">速度与准确度均衡<br>日常使用首选</div>
+                    </label>
+                    <label class="segment-card" onclick="selectMode('strict')">
+                        <input type="radio" name="speed_mode" value="strict">
+                        <div class="mode-title">🛡 正式发布版</div>
+                        <div class="mode-desc">更严格的质量复核<br>适合对外发布</div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="submit-sticky" id="submitSticky">
+            <div class="submit-meta" id="submitMeta">选择文件后即可开始翻译</div>
+            <button type="submit" class="btn-primary" id="submitBtn" disabled>
+                <span class="btn-label">开始翻译</span>
+                <span class="btn-loading" id="submitBtnLoading" aria-hidden="true">
+                    <span class="btn-spinner"></span>
+                    正在提交...
+                </span>
+            </button>
+        </div>
+    </form>
+
+    <!-- Progress -->
+    <div class="progress-container fade-section" id="progressContainer" role="status" aria-live="polite">
+        <div class="progress-stage-pill progress-state-pending" id="progressStagePill">
+            <span class="stage-icon" id="progressStageIcon" aria-hidden="true">⏳</span>
+            <span class="stage-label" id="progressStageLabel">排队中</span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-text-main" id="progressTextMain">排队进入服务器...</div>
+        <div class="progress-text-sub" id="progressTextSub"></div>
+        <details class="progress-details">
+            <summary>详细信息</summary>
+            <div class="detail-content" id="detailContent"></div>
+        </details>
+        <div class="progress-actions">
+            <button type="button" class="btn-secondary btn-progress-action" id="progressBackHomeBtn">返回首页</button>
+            <button type="button" class="btn-secondary btn-progress-action" id="progressRetryBtn">重新翻译该文档</button>
+        </div>
+    </div>
+
+    <!-- Result card -->
+    <div class="result-card fade-section" id="resultCard">
+        <div class="result-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+            </svg>
+        </div>
+        <div class="result-title">翻译已顺利完成！</div>
+        <div class="result-stats" id="resultStats"></div>
+        <div class="badges">
+            <span class="badge badge-mode" id="resBadgeMode">模式: Balanced</span>
+            <span class="badge badge-source hidden" id="resBadgeSource">源语言: English</span>
+            <span class="badge" id="resBadgeQA">QA 执行状态</span>
+        </div>
+
+        <div class="qa-summary-line" id="resultQualitySummary" style="display:none;"></div>
+        <details class="qa-details" id="resultQualityWrap" style="display:none;">
+            <summary>查看检测细节</summary>
+            <div class="qa-metrics" id="resultQualityDetails"></div>
+        </details>
+
+        <a id="manualDownloadBtn" class="btn-download disabled" href="#" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span class="dl-text">下载译文</span>
+        </a>
+        <button class="btn-text-link" onclick="resetForm()">再翻一份</button>
+    </div>
+
+    <div class="alert-error" id="alertError"></div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Confirm dialog -->
+<div class="confirm-overlay" id="confirmOverlay" aria-hidden="true">
+    <div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmMessage">
+        <div class="confirm-title" id="confirmTitle">请确认操作</div>
+        <div class="confirm-message" id="confirmMessage">确认继续吗？</div>
+        <div class="confirm-actions">
+            <button type="button" class="btn-secondary confirm-btn" id="confirmCancelBtn">取消</button>
+            <button type="button" class="btn-primary confirm-btn" id="confirmOkBtn">确定</button>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/app.js?v=20260603a"></script>
+</body>
+</html>

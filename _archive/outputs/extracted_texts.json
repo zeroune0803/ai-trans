@@ -1,0 +1,653 @@
+[
+    {
+        "original": "ASP/D L3运维未尽事宜沟通"
+    },
+    {
+        "original": "1. 2025年ASP/D L3运维情况汇报"
+    },
+    {
+        "original": "SM(Service Management)1名的工时及费用还未合意，希望AST5月份内承认该费用，并完成对DMC的验收手续。"
+    },
+    {
+        "original": "14 个月"
+    },
+    {
+        "original": "项目总投入工时"
+    },
+    {
+        "original": "94 人月(月均：6.7人月）"
+    },
+    {
+        "original": "项目总费用 (CNY)"
+    },
+    {
+        "original": "10,594,515.5"
+    },
+    {
+        "original": "▍总费用构成分析"
+    },
+    {
+        "original": "■ ASPD L3 应用运维 (72.8%)CNY 7,707,015.5"
+    },
+    {
+        "original": "■ Keendata 授权运维 (27.2%)CNY 2,887,500.0"
+    },
+    {
+        "original": "▍ASPD L3 应用运维费用细分"
+    },
+    {
+        "original": "已合意部分CNY 6,564,836.0"
+    },
+    {
+        "original": "未合意部分CNY 1,142,179.5"
+    },
+    {
+        "original": "服务周期 (2024.11 - 2025.12)"
+    },
+    {
+        "original": "L3应用运维13,850H/ 80人月"
+    },
+    {
+        "original": "SM1名/14人月"
+    },
+    {
+        "original": "应用运维SM1名，双方分歧："
+    },
+    {
+        "original": "AST：认为费用未在项目初期明确说明，暂未认可。"
+    },
+    {
+        "original": "DMC：费用及配置在提案与合同均有明确记载，属项目必需成本，应按实绩结算。"
+    },
+    {
+        "original": "2. 2026年 ASP/D L3运维沟通背景"
+    },
+    {
+        "original": "自2025年11月以来，DMC与AST就2026年度ASPD L3应用运维的体制与费用问题进行了十几次会议沟通。截至目前，双方仍未就2026年运维体制及费用达成一致，运维合同仍未签署。"
+    },
+    {
+        "original": "2025年11月12日"
+    },
+    {
+        "original": "杭州会议"
+    },
+    {
+        "original": "确定，依据2025年运维实绩签订2026年合同"
+    },
+    {
+        "original": "双社长会议"
+    },
+    {
+        "original": "决定，3月后的运维金额将参考2025年运维实绩确定"
+    },
+    {
+        "original": "2026年1月6日"
+    },
+    {
+        "original": "2026年2月9日"
+    },
+    {
+        "original": "运维会议"
+    },
+    {
+        "original": "AST提议自3月起采用固定人月模式，并提出费用上限700万日元/月"
+    },
+    {
+        "original": "运维会议"
+    },
+    {
+        "original": "DMC回应，L3运维的最小团队配置为5名担当+1名SM"
+    },
+    {
+        "original": "2026年2月26日"
+    },
+    {
+        "original": "2026年3月11日"
+    },
+    {
+        "original": "运维会议"
+    },
+    {
+        "original": "AST要求DMC按2.9人/月计算费用，并提出了他们设想的应对体制"
+    },
+    {
+        "original": "运维会议"
+    },
+    {
+        "original": "DMC再次说明低于6人月/月，无法保障SLO及运维正常运作。"
+    },
+    {
+        "original": "2026年3月19日"
+    },
+    {
+        "original": "2026年4月17日"
+    },
+    {
+        "original": "邮件沟通"
+    },
+    {
+        "original": "DMC提出备选方案ASPDL3运维迁移回日本由AST或供应商对应"
+    },
+    {
+        "original": "邮件沟通"
+    },
+    {
+        "original": "AST提议可以按6人月/月签署合同，前提是运维剩余工数转开发项目使用"
+    },
+    {
+        "original": "2026年4月21日"
+    },
+    {
+        "original": "2026年4月29日"
+    },
+    {
+        "original": "邮件沟通"
+    },
+    {
+        "original": "DMC从技术角度解释5+1最小体制，强调开发同运维需要分开"
+    },
+    {
+        "original": "3. 2026年 ASP/D L3运维主要课题"
+    },
+    {
+        "original": "AST要求：①压缩L3对应体制为2.9人月/月，预算控制在700万日元(约30万元）/月  OR"
+    },
+    {
+        "original": "②按照6人月/月签约，运维剩余费用转开发使用。"
+    },
+    {
+        "original": "DMC观点：①无法在该体制及费用构成下提供可以确保SLO的运维服务 ②开发需同运维分离。"
+    },
+    {
+        "original": "11%↓"
+    },
+    {
+        "original": "较2025年实绩 费用压缩"
+    },
+    {
+        "original": "应用运维，6人月/月、CNY 587万/年，是基于2025年实绩，保障SLO前提下，合理且最小化对应体制。（不含授权运维：CNY247.5万）"
+    },
+    {
+        "original": "【运维范围】：涉及多核心系统CDP，MA，BI，数据基盘"
+    },
+    {
+        "original": "【人员配置】：涉及产品，开发前后端，大数据，中间件等专项人力"
+    },
+    {
+        "original": "GAP："
+    },
+    {
+        "original": "·费用：-227万元"
+    },
+    {
+        "original": "·体制：-3.1人月/月"
+    },
+    {
+        "original": "·比例：-39%"
+    },
+    {
+        "original": "3. 课题解决方案"
+    },
+    {
+        "original": "DMC4月17日提出如下方案，至今还未有定论"
+    },
+    {
+        "original": "方案 A：DMC 继续运维"
+    },
+    {
+        "original": "🔹运维主体：DMC 团队"
+    },
+    {
+        "original": "🔹体制规模：6人月 / 月(最小体制)"
+    },
+    {
+        "original": "🔹费用模式：固定月费制"
+    },
+    {
+        "original": "🔹管理效率：改为月报制，免明细确认"
+    },
+    {
+        "original": "🔹支付方式：次月定期结算支付"
+    },
+    {
+        "original": "🔹服务承诺：持续稳定SLO保障"
+    },
+    {
+        "original": "方案 B：运维迁移至日本侧"
+    },
+    {
+        "original": "🔹运维主体：AST 或 AST 指定供应商"
+    },
+    {
+        "original": "🔹交接保障：2个月交接期"
+    },
+    {
+        "original": "🔹费用模式：已发生月份，按6人月/月结算"
+    },
+    {
+        "original": "🔹管理效率：AST自主管理"
+    },
+    {
+        "original": "🔹后续支持：按Case报价，承认后提供协助"
+    },
+    {
+        "original": "🔹风险提示：交接后 SLO 无法确保"
+    },
+    {
+        "original": "Appendix-DMC提议的运维体制构成"
+    },
+    {
+        "original": "项目别月度工数构成（人月）"
+    },
+    {
+        "original": "PJ"
+    },
+    {
+        "original": "CDP"
+    },
+    {
+        "original": "BI"
+    },
+    {
+        "original": "MA"
+    },
+    {
+        "original": "产品"
+    },
+    {
+        "original": "0.3"
+    },
+    {
+        "original": "0.3"
+    },
+    {
+        "original": "开发（Data）"
+    },
+    {
+        "original": "0.4"
+    },
+    {
+        "original": "0.3"
+    },
+    {
+        "original": "0.3"
+    },
+    {
+        "original": "开发（Front）"
+    },
+    {
+        "original": "0.5"
+    },
+    {
+        "original": "0.3"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "开发（Backend）"
+    },
+    {
+        "original": "0.5"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "0.4"
+    },
+    {
+        "original": "测试（Test）"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "中间件（OSS）"
+    },
+    {
+        "original": "0.5"
+    },
+    {
+        "original": "PMO运维课题对应/管理"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "SM"
+    },
+    {
+        "original": "1"
+    },
+    {
+        "original": "合計："
+    },
+    {
+        "original": "6"
+    },
+    {
+        "original": "最小体制构成：技术担当5名+SM 1名/月"
+    },
+    {
+        "original": "需要同时储备产品，开发前后端，测试，大数据及中间件等专项人力"
+    },
+    {
+        "original": "DMC提案"
+    },
+    {
+        "original": "0.6"
+    },
+    {
+        "original": "1.0"
+    },
+    {
+        "original": "2.1"
+    },
+    {
+        "original": "0.6"
+    },
+    {
+        "original": "0.5"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "1"
+    },
+    {
+        "original": "6"
+    },
+    {
+        "original": "AST要求"
+    },
+    {
+        "original": "0.6"
+    },
+    {
+        "original": "1.0"
+    },
+    {
+        "original": "0.5"
+    },
+    {
+        "original": "0.6"
+    },
+    {
+        "original": "0"
+    },
+    {
+        "original": "0.2"
+    },
+    {
+        "original": "0"
+    },
+    {
+        "original": "2.9"
+    },
+    {
+        "original": "差异"
+    },
+    {
+        "original": "0"
+    },
+    {
+        "original": "0"
+    },
+    {
+        "original": "1.6"
+    },
+    {
+        "original": "0"
+    },
+    {
+        "original": "0.5"
+    },
+    {
+        "original": "0"
+    },
+    {
+        "original": "1"
+    },
+    {
+        "original": "3.1"
+    },
+    {
+        "original": "Appendix-2025年运维整体费用"
+    },
+    {
+        "original": "2025年ASP/D L3保守費用"
+    },
+    {
+        "original": "No."
+    },
+    {
+        "original": "内容"
+    },
+    {
+        "original": "費用（CNY）"
+    },
+    {
+        "original": "費用（JPY）ご参考"
+    },
+    {
+        "original": "期間"
+    },
+    {
+        "original": "備考"
+    },
+    {
+        "original": "①"
+    },
+    {
+        "original": "ASP/D L3アプリ保守"
+    },
+    {
+        "original": "6,003,616.00"
+    },
+    {
+        "original": "138,083,168.00"
+    },
+    {
+        "original": "2024/11~2025/11"
+    },
+    {
+        "original": "②"
+    },
+    {
+        "original": "ASP/D L3アプリ保守"
+    },
+    {
+        "original": "561,220.00"
+    },
+    {
+        "original": "12,908,060.00"
+    },
+    {
+        "original": "2025/12/1~2025/12/31"
+    },
+    {
+        "original": "脆弱性対応含むCNY215,315"
+    },
+    {
+        "original": "③"
+    },
+    {
+        "original": "Keendata　License"
+    },
+    {
+        "original": "保守"
+    },
+    {
+        "original": "2,887,500.00"
+    },
+    {
+        "original": "66,412,500.00"
+    },
+    {
+        "original": "2024/11~2025/12"
+    },
+    {
+        "original": "④"
+    },
+    {
+        "original": "SM１名"
+    },
+    {
+        "original": "1,142,179.50"
+    },
+    {
+        "original": "26,270,128.50"
+    },
+    {
+        "original": "2024/11~2025/12"
+    },
+    {
+        "original": "協議中"
+    },
+    {
+        "original": "合計："
+    },
+    {
+        "original": "10,594,515.50"
+    },
+    {
+        "original": "243,673,856.50"
+    },
+    {
+        "original": "レート：CNY１＝JPY　23"
+    },
+    {
+        "original": "End of Documentation"
+    },
+    {
+        "original": "Appendix-运维体制构成的理论依据"
+    },
+    {
+        "original": "2025年运维"
+    },
+    {
+        "original": "预算及提案"
+    },
+    {
+        "original": "25年DMC提案体制："
+    },
+    {
+        "original": "6名技术担当+1名SM（Service Management）"
+    },
+    {
+        "original": "月均：7人月"
+    },
+    {
+        "original": "2025年双方合意预算额："
+    },
+    {
+        "original": "CNY10,825,000"
+    },
+    {
+        "original": "（JPY 216,500,000）"
+    },
+    {
+        "original": "·应用运维：CNY 7,937,500"
+    },
+    {
+        "original": "·授权运维：CNY 2,887,500"
+    },
+    {
+        "original": "2025年运维"
+    },
+    {
+        "original": "对应实绩"
+    },
+    {
+        "original": "25年对应实绩工数："
+    },
+    {
+        "original": "80人月+SM14人月"
+    },
+    {
+        "original": "（ 2024/11~2025/12 ）"
+    },
+    {
+        "original": "月均：6.7人月"
+    },
+    {
+        "original": "25年实绩发生费用："
+    },
+    {
+        "original": "CNY 10,594,515.5"
+    },
+    {
+        "original": "（ JPY 243,673,856.5 ）"
+    },
+    {
+        "original": "·应用运维：CNY 7,707,015.5"
+    },
+    {
+        "original": "·授权运维：CNY 2,887,500"
+    },
+    {
+        "original": "实绩/预算比：98%"
+    },
+    {
+        "original": "*2025/1~2025/12费用："
+    },
+    {
+        "original": "CNY 9,081,013.29"
+    },
+    {
+        "original": "2026年运维"
+    },
+    {
+        "original": "体制及费用"
+    },
+    {
+        "original": "26年DMC提案体制"
+    },
+    {
+        "original": "5名技术担当+1名SM"
+    },
+    {
+        "original": "（最小体制构成）"
+    },
+    {
+        "original": "月均：6人月"
+    },
+    {
+        "original": "26年DMC提案签约金额："
+    },
+    {
+        "original": "CNY 8,349,066"
+    },
+    {
+        "original": "(JPY192,028,518)"
+    },
+    {
+        "original": "·应用运维：CNY 5,874,066"
+    },
+    {
+        "original": "·授权运维：CNY 2,475,000"
+    },
+    {
+        "original": "去年同期比：92 %"
+    },
+    {
+        "original": "去年金额差：-731,947.29"
+    },
+    {
+        "original": "-8%"
+    },
+    {
+        "original": "从技术角度5名技术担当+1名SM是DMC可以提供ASPD L3应用运维的最小体制构成"
+    },
+    {
+        "original": "参考2025年运维实绩，2026年的体制及费用构成是合理的"
+    }
+]
